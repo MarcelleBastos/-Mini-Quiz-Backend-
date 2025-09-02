@@ -27,7 +27,7 @@ mini-quiz-backend/
 
 ├── index.php # Página inicial (início do quiz)
 
-├── quiz.php # Lógica principal do quiz
+├── perguntas.php # Lógica principal do quiz
 
 ├── style.css # Estilos básicos
 
