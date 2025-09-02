@@ -22,6 +22,7 @@ Um quiz simples em **PHP** com perguntas e respostas múltipla escolha, desenvol
 ## 📂 Estrutura de Arquivos
 
 mini-quiz-backend/
+
 │
 
 ├── index.php # Página inicial (início do quiz)
