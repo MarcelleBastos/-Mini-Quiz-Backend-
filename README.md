@@ -1,4 +1,4 @@
-# 🎯 Mini Quiz Backend
+## 🎯 Mini Quiz Backend
 
 Um quiz simples em **PHP** com perguntas e respostas múltipla escolha, desenvolvido para praticar:
 - Manipulação de arrays;
