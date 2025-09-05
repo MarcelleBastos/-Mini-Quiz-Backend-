@@ -15,7 +15,7 @@ $questions = [
   ],
   [
     "pergunta" => "Qual superglobal é usada para sessões em PHP?",
-    "opcoes" => ["$_POST", "$_SESSION", "$_COOKIE"],
+    "opcoes" => ["POST", "SESSION", "COOKIE"],
     "correta" => 1
   ],
   [
