@@ -10,6 +10,6 @@
     <main>
         <h1>Boas Vindas ao Mini Quiz!</h1>
         <p>Teste seus conhecimentos com esse Quiz simples em PHP!<p>
-            <a href="perguntas.php?question=0" class="btn">Iniciar Quiz</a>
+            <a href="perguntas.php" class="btn">Iniciar Quiz</a>
 </body>
 </html>
