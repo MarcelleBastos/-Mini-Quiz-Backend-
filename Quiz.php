@@ -15,6 +15,9 @@ $perguntaAtual = $questions[$indice];
 <body>
     <main class="container">
         <h1>Perguntas</h1>
+        <?php if (isset($_SESSION['feedback'])): ?>
+            <div class="feedback-msg"><?php echo $_SESSION['feedback']; unset($_SESSION['feedback']); ?></div>
+        <?php endif; ?>
         <section id="secao_form">
             <form action="CalculoPontuação.php" method="post">
                 <h3><?php echo $perguntaAtual['pergunta']; ?></h3>
