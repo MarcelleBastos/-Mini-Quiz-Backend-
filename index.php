@@ -1,3 +1,8 @@
+<?php
+//inicio da sessão
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

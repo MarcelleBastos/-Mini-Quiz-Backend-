@@ -7,12 +7,14 @@ if (!isset($_SESSION['acertos'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $QuestãoAtual = $_POST['currentQuestion'];
-    $OpçãoSelecionada = $_POST['option'];
+    $QuestãoAtual = isset($_POST['currentQuestion']) ? (int)$_POST['currentQuestion'] : 0;
+    $OpçãoSelecionada = isset($_POST['option']) ? $_POST['option'] : null;
 
     // Verifica se a resposta está correta
-    if ($OpçãoSelecionada == $questions[$QuestãoAtual]['correta']) {
-        $_SESSION['acertos']++;
+    if ($OpçãoSelecionada !== null && isset($questions[$QuestãoAtual]) && isset($questions[$QuestãoAtual]['correta'])) {
+        if ($OpçãoSelecionada == $questions[$QuestãoAtual]['correta']) {
+            $_SESSION['acertos']++;
+        }
     }
 
     $QuestãoAtual++;
