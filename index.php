@@ -1,8 +1,3 @@
-<?php
-session_start();
-session_destroy(); // Limpa sessão ao entrar na página inicial
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
