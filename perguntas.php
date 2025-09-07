@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // Array de perguntas
 $questions = [
   [
