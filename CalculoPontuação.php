@@ -7,26 +7,25 @@ if (!isset($_SESSION['acertos'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $QuestãoAtual = isset($_POST['currentQuestion']) ? (int)$_POST['currentQuestion'] : 0;
-    $OpçãoSelecionada = isset($_POST['option']) ? $_POST['option'] : null;
+    $QuestaoAtual = isset($_POST['currentQuestion']) ? (int)$_POST['currentQuestion'] : 0;
+    $OpcaoSelecionada = isset($_POST['option']) ? $_POST['option'] : null;
 
     // Verifica se a resposta está correta
-    if ($OpçãoSelecionada !== null && isset($questions[$QuestãoAtual]) && isset($questions[$QuestãoAtual]['correta'])) {
-        if ($OpçãoSelecionada == $questions[$QuestãoAtual]['correta']) {
+    if ($OpcaoSelecionada !== null && isset($questions[$QuestaoAtual]) && isset($questions[$QuestaoAtual]['correta'])) {
+        if ($OpcaoSelecionada == $questions[$QuestaoAtual]['correta']) {
             $_SESSION['acertos']++;
         }
     }
 
-    $QuestãoAtual++;
-} 
+    $QuestaoAtual++;
+    $_SESSION['indice'] = $QuestaoAtual;
 
-else {
-    $QuestãoAtual = isset($_GET['question']) ? (int)$_GET['question'] : 0;
-}
-
-// Verifica se o quiz terminou
-
-if ($QuestãoAtual >= count($questions)) {
-    header('Location: Resultado.php');
-    exit();
+    // Verifica se o quiz terminou
+    if ($QuestaoAtual >= count($questions)) {
+        header('Location: Resultado.php');
+        exit();
+    } else {
+        header('Location: Quiz.php');
+        exit();
+    }
 }
